@@ -426,31 +426,36 @@
 				this.steps.addClass("ui-helper-reset ui-corner-all");
 				this.steps.find(":input").addClass("ui-helper-reset ui-state-default");
 			}
-		},
-
-		options: {
-	   		historyEnabled	: false,
-			validationEnabled : false,
-			validationOptions : undefined,
-			formPluginEnabled : false,
-			linkClass	: ".link",
-			submitStepClass : "submit_step",
-			back : ":reset",
-			next : ":submit",
-			textSubmit : 'Submit',
-			textNext : 'Next',
-			textBack : 'Back',
-			remoteAjax : undefined,
-			inAnimation : {opacity: 'show'},
-			outAnimation: {opacity: 'hide'},
-			inDuration : 400,
-			outDuration: 400,
-			easing: 'swing',
-			focusFirstInput : false,
-			disableInputFields : true,
-			formOptions : { reset: true, success: function(data) { if( (window['console'] !== undefined) ){console.log("%s", "form submit successful");}},
-			disableUIStyles : false
-		}
-   }
+		}	
+		
+   })
+ 
+ $.extend($.ui.formwizard, {
+	version: "1.7.2",
+	defaults: {
+		historyEnabled	: false,
+		validationEnabled : false,
+		validationOptions : undefined,
+		formPluginEnabled : false,
+		linkClass	: ".link",
+		submitStepClass : "submit_step",
+		back : ":reset",
+		next : ":submit",
+		textSubmit : 'Submit',
+		textNext : 'Next',
+		textBack : 'Back',
+		remoteAjax : undefined,
+		inAnimation : {opacity: 'show'},
+		outAnimation: {opacity: 'hide'},
+		inDuration : 400,
+		outDuration: 400,
+		easing: 'swing',
+		focusFirstInput : false,
+		disableInputFields : true,
+		formOptions : { reset: true, success: function(data) { if( (window['console'] !== undefined) ){console.log("%s", "form submit successful");}},
+		disableUIStyles : false }
+	}
  });
+
+
 })(jQuery);
