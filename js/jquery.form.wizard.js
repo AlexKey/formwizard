@@ -288,9 +288,9 @@
 
 			if(links != undefined){
 				if(links.filter(":radio,:checkbox").size() > 0){
-					link = links.filter(this.options.linkClass + ":checked").val();
+					link = links.filter(this.options.linkClass + ":checked").attr(this.options.linkAttr);
 				}else{
-					link = $(links).val();
+					link = $(links).attr(this.options.linkAttr);
 				}
 			}
 			return link;
@@ -437,7 +437,8 @@
 		validationEnabled : false,
 		validationOptions : undefined,
 		formPluginEnabled : false,
-		linkClass	: ".link",
+		linkClass: ".link",
+		linkAttr: "value",
 		submitStepClass : "submit_step",
 		back : ":reset",
 		next : ":submit",
